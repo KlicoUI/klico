@@ -1,0 +1,27 @@
+<div class="klico-calendar-input-container">
+    <input type="text" ng-model="textvalue"/>
+    <input type="date" ng-model="value"/>
+</div>
+<div class="klico-calendar-container">
+    <table>
+        <caption>
+            <button>&lt;&lt;</button>
+            {{ caption.month }}
+            <button>&gt;&gt;</button>
+        </caption>
+        <thead>
+            <tr>
+                <td ng-repeat="weekDay in weekDays track by $index">
+                    {{ weekDay }}
+                </td>
+            </tr>
+        </thead>
+        <tbody>
+            <tr ng-repeat="week in weeks">
+                <td ng-repeat="day in week" ng-click="setDate(day.date,day.month,day.year)">
+                    {{ day.date }}
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>

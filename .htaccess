@@ -1,0 +1,4 @@
+
+RewriteEngine on
+RewriteRule ^[/]?(Klico/)?js|css|app|images|fonts|api[/]? - [L]
+RewriteRule ^(.*) index.php [NS,PT]
